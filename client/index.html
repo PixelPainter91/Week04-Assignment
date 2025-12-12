@@ -2,12 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="./src/app.js" type="module" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>client</title>
+    <title>Guestbook</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header id="mainlogo"><img src="./public/assets/logomain.png" alt="Surf Shack Hostel title over a blue wave graphic"></header>
+    <!-- TODO: an element to allow users to input data -->
+  <div class="guestbkContainer">
+  <div class="guestbkAddBox" id="openFormBtn">
+    + Add Your Entry
+  </div>
+
+
+</div>
+
+<!-- Modal --------------------------->
+<div class="modal" id="guestFormModal">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    
+    <!-- guestbk form                           -->
+    <form id="guestForm">
+      <h2>Add Your Entry</h2>
+
+      <label for="photo">Photo URL:</label>
+      <input type="text" id="photo" name="photo" placeholder="Enter photo URL">
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+      <label for="socials">Social Link:</label>
+      <input type="text" id="socials" name="socials" placeholder="Your socials (optional)">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
   </body>
 </html>
