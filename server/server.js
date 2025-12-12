@@ -10,14 +10,19 @@ import { db } from "./dbConnection.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://surfshackhostelserver.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"]
+  
+}));
 app.use(express.json());
 
 //port
-const PORT = 8080;
-app.listen(PORT, function () {
-  console.info(`Server is running in localhost:${PORT}`);
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.info(`Server is running on port ${PORT}`);
 });
+
 
 //root route
 app.get("/", function (request, response) {

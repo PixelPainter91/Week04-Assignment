@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       // fetch("url", { method:, headers:{}, body:JSON.stringify() })
-      const response = await fetch("http://localhost:8080/new-guest", {
+      const response = await fetch("https://surfshackhostelserver.onrender.com/new-guest", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ formValues: formData })
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function loadGuestbook() {
     try {
       //fetch the GET route from the server
-      const response = await fetch("http://localhost:8080/guests")
+      const response = await fetch("https://surfshackhostelserver.onrender.com/guests")
       const entries = await response.json()
       const container = document.querySelector(".guestbkContainer")
       // render the data using DOM elements (one per piece of data)
