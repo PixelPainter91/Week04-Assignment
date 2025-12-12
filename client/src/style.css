@@ -68,6 +68,14 @@ body{
   font-weight: 600;
 }
 
+/*=================message length fix=========*/
+.entry p:nth-of-type(2) {
+  max-height: 100px;       
+  overflow-y: auto;        
+  word-wrap: break-word;
+  padding: 0 5px;          
+}
+
 /* Responsive: 
 2-column on tablet            */
 @media (max-width: 900px) {
