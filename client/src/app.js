@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const openBtn = document.getElementById("openFormBtn")
   const modal = document.getElementById("guestFormModal")
   const closeBtn = document.getElementById("closeModal")
+  const audio = document.getElementById("audio");
+const playPause = document.getElementById("playPause");
 
   openBtn.addEventListener("click", function() { modal.style.display = "block" })
   closeBtn.addEventListener("click", function() { modal.style.display = "none" })
@@ -75,3 +77,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadGuestbook()
 })
+
+
+playPause.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    playPause.textContent = "⏸";
+  } else {
+    audio.pause();
+    playPause.textContent = "▶";
+  }
+});

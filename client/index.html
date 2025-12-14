@@ -8,15 +8,25 @@
     <title>Guestbook</title>
   </head>
   <body>
-    <header id="mainlogo"><img src="./public/assets/logomain.png" alt="Surf Shack Hostel title over a blue wave graphic"></header>
+    <header id="mainlogo"><img src="./public/assets/logomainsurfboard.png" alt="Surf Shack Hostel title over a blue wave graphic"></header>
+<div class="audio-player">
+  <button id="playPause">▶</button>
+  <audio id="audio">
+    <source src="./public/audio/sunset-ballin-kid-taro-main-version-33579-02-04.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
     <!-- TODO: an element to allow users to input data -->
   <div class="guestbkContainer">
   <div class="guestbkAddBox" id="openFormBtn">
-    + Add Your Entry
+    + Leave us a message
   </div>
 
 
 </div>
+
+    
+   
 
 <!-- Modal --------------------------->
 <div class="modal" id="guestFormModal">
@@ -25,7 +35,7 @@
     
     <!-- guestbk form                           -->
     <form id="guestForm">
-      <h2>Add Your Entry</h2>
+      <h2>Thanks for your stay!</h2>
 
       <label for="photo">Photo URL:</label>
       <input type="text" id="photo" name="photo" placeholder="Enter photo URL">

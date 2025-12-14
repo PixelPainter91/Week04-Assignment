@@ -8,7 +8,7 @@ body{
     background-color: #E1D7C4;
 }
 #mainlogo{
-    background: linear-gradient(to bottom, #E1D7C4 43%, #1f7ad4 57%);
+    background: linear-gradient(to bottom, #e9b69c 43%, #1f7ad4 57%);
     border-bottom: 0.2rem solid black;
 
 }
@@ -32,7 +32,7 @@ body{
 
 .guestbkAddBox {
   background: #eef7ff;
-  border: 2px dashed #1e90ff;
+  border: 2px dashed #593412;
   border-radius: 14px;
   padding: 40px 20px;
   text-align: center;
@@ -155,5 +155,25 @@ body{
 }
 
 #guestForm button:hover {
-  background-color: #0077cc;
+  background-color: #faff00;
+}
+.audio-player {
+  display: flex;
+  align-items: center;
+  background: #E1D7C4;
+  padding: 1rem;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.audio-player button {
+  background: #E1D7C4;
+  color: #000000;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 20%;
+  width: 20px;
+  height: 10px;
+  cursor: pointer;
+  bottom: 10px;
 }
